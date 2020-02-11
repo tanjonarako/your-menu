@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
-    "dev": "nodemon server/index.js"
+    "dev": "nodemon server/index.js",
+    "test": "SET NODE_ENV=test jest --watchAll"
   },
   "author": "Tanjona Rakotoarisoa",
   "license": "MIT",
@@ -13,12 +14,26 @@
     "body-parser": "^1.19.0",
     "bootstrap": "^4.4.1",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "heroku-cli": "^7.0.9",
-    "vue-router": "^3.1.5"
+    "jest": "^25.1.0",
+    "pg": "^7.18.1",
+    "pg-promise": "^10.4.2",
+    "pgp": "^0.1.0",
+    "supertest": "^4.0.2",
+    "vue-router": "^3.1.5",
+    "win-node-env": "^0.4.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = 'http://localhost:3000/api/categories/'
+const url = 'https://your-menu.herokuapp.com/api/categories/'
 
 class CategoryService {
   // Get All Categories

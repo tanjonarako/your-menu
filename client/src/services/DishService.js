@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = 'http://localhost:3000/api/dishs/'
+const url = 'https://your-menu.herokuapp.com/api/dishs/'
 
 class DishService {
   // Get All Dishs

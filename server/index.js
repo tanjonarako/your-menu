@@ -13,6 +13,7 @@ app.use(cors())
 // Routes
 const dishs = require('./routes/api/dishs')
 const categories = require('./routes/api/categories')
+const sidedishs = require('./routes/api/sidedishs')
 
 app.get('/', function (req, res) {
   res.send('Hello World!')
@@ -20,6 +21,7 @@ app.get('/', function (req, res) {
 
 app.use('/api/dishs', dishs)
 app.use('/api/categories', categories)
+app.use('/api/sidedishs', sidedishs)
 
 const port = process.env.PORT || 3000
 

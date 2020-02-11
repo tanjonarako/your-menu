@@ -9,7 +9,8 @@ const formatDish = (req) => {
     ...(req.params.id && { id: req.params.id }),
     name: req.body.name,
     categoryId: req.body.categoryId,
-    reference: referenceName + '_' + req.body.categoryId
+    reference: referenceName + '_' + req.body.categoryId,
+    sidedishId: req.body.sidedishId,
   }
 }
 

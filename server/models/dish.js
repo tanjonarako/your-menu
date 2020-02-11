@@ -27,10 +27,10 @@ class Dish {
   static async addDish (dish) {
     const dishId = generateId()
     return db.one(`
-      INSERT INTO dish(id, name, "categoryId", reference)
+      INSERT INTO dish(id, name, "categoryId", reference, "sidedishId")
       VALUES
-       ($1, $2, $3, $4)
-      RETURNING id, name, "categoryId", reference;`, [dishId, dish.name, dish.categoryId, dish.reference])
+       ($1, $2, $3, $4, $5)
+      RETURNING id, name, "categoryId", reference, "sidedishId";`, [dishId, dish.name, dish.categoryId, dish.reference, dish.sidedishId])
   }
 
   static async deleteDish (id) {

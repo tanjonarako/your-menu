@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
-    "test": "SET NODE_ENV=test jest --watchAll"
+    "test": "jest --watchAll"
   },
   "author": "Tanjona Rakotoarisoa",
   "license": "MIT",
